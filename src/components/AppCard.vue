@@ -57,7 +57,6 @@ export default {
     );
 
     const toggleLike = () => {
-      props.obj.title = 'dsajkdoa';
       context.emit('toggleLike');
     };
 
