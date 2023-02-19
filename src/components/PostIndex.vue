@@ -7,14 +7,14 @@
 
       <div class="row g-3">
         <div v-for="post in posts" :key="post.id" class="col-4">
-          <AppCard
+          <PostItem
             :title="post.title"
             :contents="post.contents"
             :type="post.type"
             :is-like="post.isLike"
             @toggle-like="post.isLike = !post.isLike"
             :obj="obj"
-          ></AppCard>
+          ></PostItem>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
 
 <script>
 import { reactive, ref } from 'vue';
-import AppCard from '@/components/AppCard.vue';
+import PostItem from '@/components/PostItem.vue';
 import PostCreate from '@/components/PostCreate.vue';
 import LabelInput from '@/components/LabelInput.vue';
 import LabelTitle from '@/components/LabelTitle.vue';
@@ -40,7 +40,7 @@ import Username from '@/components/Username.vue';
 
 export default {
   components: {
-    AppCard,
+    PostItem,
     PostCreate,
     LabelInput,
   },
